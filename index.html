@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>QuoreB2B Form</title>
+
+  
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+
+  
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+
+  <div class="form-wrapper">
+    <h2>Ready to Get Quoreb2b?</h2>
+
+    <form>
+      <div class="inline-fields">
+        <div>
+          <label>Name *</label>
+          <input type="text" required />
+        </div>
+        <div>
+          <label>Email *</label>
+          <input type="email" required />
+        </div>
+      </div>
+
+      <label>Phone Number *</label>
+      <input type="tel" required />
+
+      <label>What are your top marketing goals?</label>
+      <div class="goal-card-grid" id="goalContainer">
+        <div class="goal-card" onclick="toggleGoal(this)">
+          <i class="fas fa-bullhorn"></i> Build Brand Awareness
+        </div>
+        <div class="goal-card" onclick="toggleGoal(this)">
+          <i class="fas fa-chart-line"></i> Create & Capture Demand
+        </div>
+        <div class="goal-card" onclick="toggleGoal(this)">
+          <i class="fas fa-user-friends"></i> Account-Based Marketing Program
+        </div>
+        <div class="goal-card" onclick="toggleGoal(this)">
+          <i class="fas fa-coins"></i> Increase Pipeline Revenue
+        </div>
+        <div class="goal-card" onclick="toggleGoal(this)">
+          <i class="fas fa-chart-bar"></i> Improve Conversion Rates
+        </div>
+        <div class="goal-card" onclick="toggleGoal(this)">
+          <i class="fab fa-google"></i> Google Search
+        </div>
+        <div class="goal-card" onclick="toggleGoal(this)">
+          <i class="fas fa-envelope"></i> Email Marketing
+        </div>
+        <div class="goal-card" onclick="toggleGoal(this)">
+          <i class="fas fa-ellipsis-h"></i> Others
+        </div>
+      </div>
+
+      <label>Tell us more about your needs</label>
+      <textarea rows="4"></textarea>
+
+      <label>How did you hear about us? *</label>
+      <select required>
+        <option value="">Please Select</option>
+        <option>Google</option>
+        <option>LinkedIn</option>
+        <option>Instagram</option>
+        <option>Referred by friend</option>
+        <option>Other</option>
+      </select>
+
+      <label class="note"><input type="checkbox" required /> I agree to the Privacy Policy</label>
+
+      <button type="submit">Submit Consultation Request</button>
+    </form>
+  </div>
+
+  <script src="script.js">
+  
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,120 @@
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #7c7979;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .form-wrapper {
+      background: #dad7d7;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      max-width: 750px;
+      width: 100%;
+      animation: fadeInUp 1s ease-out;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-family: cursive;
+      color: rgb(51, 22, 218);
+      font: size 50px; ;
+    }
+
+    .inline-fields {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 10px;
+      border: 1px solid #787171;
+      font-size: 16px;
+    }
+
+    .goal-card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 15px;
+      margin: 10px 0 20px;
+    }
+
+    .goal-card {
+      border: 2px solid #857c7c;
+      border-radius: 12px;
+      padding: 12px;
+      cursor: pointer;
+      text-align: center;
+      transition: all 0.3s ease;
+      background: #7667d8;
+      font-size: 15px;
+    }
+
+    .goal-card:hover {
+      background: #501990;
+      border-color: #afa6ad;
+      transform: scale(1.02);
+    }
+
+    .goal-card.selected {
+      background: #47339a;
+      color: #fff;
+      border-color: #6551d4;
+    }
+
+    button {
+      background: #391ea2;
+      color: rgb(239, 225, 225);
+      padding: 12px;
+      width: 100%;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #3004a9;
+    }
+
+    label {
+      font-weight: 600;
+      margin-top: 10px;
+      display: block;
+    }
+
+    .note {
+      margin-top: 15px;
+      font-size: 14px;
+    }
+
+    
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .inline-fields {
+        flex-direction: column;
+      }
+    }
+  
