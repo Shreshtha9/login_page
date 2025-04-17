@@ -8,7 +8,7 @@ const form = document.querySelector("form");
 const successMessage = document.getElementById("successMessage");
 
 form.addEventListener("submit", function (e) {
-  e.preventDefault(); // Prevent default form submission
+  e.preventDefault(); 
 
   const formData = new FormData(form);
 
@@ -18,11 +18,11 @@ form.addEventListener("submit", function (e) {
   })
   .then(response => {
     if (response.ok) {
-      form.reset(); // Clear the form
-      successMessage.style.display = "block"; // Show success message
+      form.reset(); 
+      successMessage.style.display = "block"; 
       setTimeout(() => {
         successMessage.style.display = "none";
-      }, 5000); // Hide after 5 seconds
+      }, 5000); 
     } else {
       alert("Oops! Something went wrong.");
     }
