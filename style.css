@@ -25,12 +25,12 @@
       margin-bottom: 20px;
       font-family: cursive;
       color: rgb(51, 22, 218);
-      font: size 50px; ;
+      font-size: 32px;
     }
 
     .inline-fields {
       display: flex;
-      gap: 15px;
+      gap: 40px;
       flex-wrap: wrap;
     }
 
@@ -100,7 +100,6 @@
       font-size: 14px;
     }
 
-    
     @keyframes fadeInUp {
       from {
         opacity: 0;
@@ -111,10 +110,6 @@
         transform: translateY(0);
       }
     }
-
-    @media (max-width: 768px) {
-      .inline-fields {
-        flex-direction: column;
-      }
-    }
+   
+   
   

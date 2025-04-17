@@ -5,69 +5,57 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>QuoreB2B Form</title>
 
-  
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
-
-  
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/web3forms@1.0.0/dist/web3forms.min.css">
 
   
   <link rel="stylesheet" href="style.css">
-  
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
 </head>
 <body>
 
   <div class="form-wrapper">
     <h2>Ready to Get Quoreb2b?</h2>
 
-    <form>
+    <form method="POST" action="https://api.web3forms.com/submit">
+      <input type="hidden" name="access_key" value="d2de4773-7e69-47b5-976c-50267c31532a">
+
+
       <div class="inline-fields">
         <div>
           <label>Name *</label>
-          <input type="text" required />
+          <input type="text" name="name" required />
         </div>
         <div>
           <label>Email *</label>
-          <input type="email" required />
+          <input type="email" name="email" required />
         </div>
       </div>
 
       <label>Phone Number *</label>
-      <input type="tel" required />
+      <input type="tel" name="phone" required />
 
       <label>What are your top marketing goals?</label>
       <div class="goal-card-grid" id="goalContainer">
-        <div class="goal-card" onclick="toggleGoal(this)">
-          <i class="fas fa-bullhorn"></i> Build Brand Awareness
-        </div>
-        <div class="goal-card" onclick="toggleGoal(this)">
-          <i class="fas fa-chart-line"></i> Create & Capture Demand
-        </div>
-        <div class="goal-card" onclick="toggleGoal(this)">
-          <i class="fas fa-user-friends"></i> Account-Based Marketing Program
-        </div>
-        <div class="goal-card" onclick="toggleGoal(this)">
-          <i class="fas fa-coins"></i> Increase Pipeline Revenue
-        </div>
-        <div class="goal-card" onclick="toggleGoal(this)">
-          <i class="fas fa-chart-bar"></i> Improve Conversion Rates
-        </div>
-        <div class="goal-card" onclick="toggleGoal(this)">
-          <i class="fab fa-google"></i> Google Search
-        </div>
-        <div class="goal-card" onclick="toggleGoal(this)">
-          <i class="fas fa-envelope"></i> Email Marketing
-        </div>
-        <div class="goal-card" onclick="toggleGoal(this)">
-          <i class="fas fa-ellipsis-h"></i> Others
-        </div>
+        <div class="goal-card" onclick="toggleGoal(this)"><i class="fas fa-bullhorn"></i> Build Brand Awareness</div>
+        <div class="goal-card" onclick="toggleGoal(this)"><i class="fas fa-chart-line"></i> Create & Capture Demand</div>
+        <div class="goal-card" onclick="toggleGoal(this)"><i class="fas fa-user-friends"></i> Account-Based Marketing Program</div>
+        <div class="goal-card" onclick="toggleGoal(this)"><i class="fas fa-coins"></i> Increase Pipeline Revenue</div>
+        <div class="goal-card" onclick="toggleGoal(this)"><i class="fas fa-chart-bar"></i> Improve Conversion Rates</div>
+        <div class="goal-card" onclick="toggleGoal(this)"><i class="fab fa-google"></i> Google Search</div>
+        <div class="goal-card" onclick="toggleGoal(this)"><i class="fas fa-envelope"></i> Email Marketing</div>
+        <div class="goal-card" onclick="toggleGoal(this)"><i class="fas fa-ellipsis-h"></i> Others</div>
       </div>
 
+      <input type="hidden" name="marketing_goals" id="marketingGoals" />
+
       <label>Tell us more about your needs</label>
-      <textarea rows="4"></textarea>
+      <textarea rows="4" name="message"></textarea>
 
       <label>How did you hear about us? *</label>
-      <select required>
+      <select name="referral" required>
         <option value="">Please Select</option>
         <option>Google</option>
         <option>LinkedIn</option>
@@ -76,15 +64,20 @@
         <option>Other</option>
       </select>
 
-      <label class="note"><input type="checkbox" required /> I agree to the Privacy Policy</label>
+      <label class="note"><input type="checkbox" required name="privacy" /> I agree to the Privacy Policy</label>
+      <div class="g-recaptcha" data-sitekey="YOUR_RECAPTCHA_SITE_KEY"></div>
+
+      <br/>
 
       <button type="submit">Submit Consultation Request</button>
     </form>
+    <div id="successMessage" style="display: none; color: green; text-align: center; margin-top: 20px;">
+      🎉 Thank you! Your form has been successfully submitted.
+    </div>
+    
   </div>
 
-  <script src="script.js">
-  
-  </script>
-
+  <script src="script.js"> </script>
+  <script src="https://cdn.jsdelivr.net/npm/web3forms@1.0.0/dist/web3forms.min.js"></script>
 </body>
 </html>
